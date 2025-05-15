@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirSprout - Resource Needs</title>
+    <link rel="stylesheet" href="rform.css">
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <h1>VirSprout</h1>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i><span class="nav-text">Home</span></a></li>
+                <li class="active"><a href="donate.html"><i class="fas fa-hand-holding-heart"></i><span class="nav-text">Donate</span></a></li>
+                <li><a href="volunteer.html"><i class="fas fa-users"></i><span class="nav-text">Volunteer</span></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+             <div class="messages">
+                <a href="messages.html" class="icon-button"><i class="fas fa-comment"></i>
+                    <span class="badge">1</span>
+                </a>
+            </div>
+            <div class="notifications">
+                <a href="notification.html" class="icon-button"><i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+            <div class="user-menu" id="userMenuToggle">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <div class="user-dropdown" id="userDropdown">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-info">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <h3>Meljah Feve Soliva</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="profile.jpeg"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Donation History</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Volunteer History</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="content-area donate-content">
+            <div class="donate-header">
+                <h2>Make a Difference Today</h2>
+                <p>Choose how you would like to support Virlanie FAITH, Inc.</p>
+            </div>
+
+            <div class="donation-tabs">
+                <button class="tab-button"><a href="donate.html">In-Kind Donations</a></button>
+                <button class="tab-button active"><a href="rform.html">Resource Needs</a></button>
+                <button class="tab-button"><a href="monetary.html">Monetary Donations</a></button>
+            </div>
+
+            <div class="donation-tab-content">
+                <div class="tab-pane active" id="resource">
+                    <div class="section-intro">
+                        <h3>Support Specific Resource Needs</h3>
+                        <p>Help fund specific resources, equipment, and services needed for our programs.</p>
+                    </div>
+                    <form class="donation-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="donor-name">Full Name </label>
+                            <input type="text" id="donor-name" name="donor-name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="donor-email">Email Address </label>
+                            <input type="email" id="donor-email" name="donor-email" required placeholder="Enter your email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="donor-phone">Phone Number</label>
+                            <input type="tel" id="donor-phone" name="donor-phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="item-description">Item Description </label>
+                            <textarea id="item-description" name="item-description" required placeholder="Describe the items you wish to donate (e.g., clothing, books, toys)" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-quantity">Quantity </label>
+                            <input type="number" id="item-quantity" name="item-quantity" required min="1" placeholder="Enter the number of items">
+                        </div>
+                        <div class="form-group">
+                            <label for="unit-measurement">Unit of Measurement </label>
+                            <select id="unit-measurement" name="unit-measurement" required>
+                                <option value="" disabled selected>Select unit of measurement</option>
+                                <option value="pieces">Pieces</option>
+                                <option value="liters">Liters</option>
+                                <option value="kilograms">Kilograms</option>
+                                <option value="boxes">Boxes</option>
+                                <option value="bags">Bags</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-method">Delivery Method </label>
+                            <select id="delivery-method" name="delivery-method" required>
+                                <option value="" disabled selected>Select delivery method</option>
+                                <option value="drop-off">Drop-off</option>
+                                <option value="pick-up">Request Pick-up</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferred-date">Preferred Delivery Date</label>
+                            <input type="date" id="preferred-date" name="preferred-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="additional-notes">Additional Notes</label>
+                            <textarea id="additional-notes" name="additional-notes" placeholder="Any special instructions or notes" rows="4"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary"> Submit </button>
+                            <a href="home.html" class="btn-outline">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            <div class="donation-instructions">
+                <h3>How to Donate Resources</h3>
+                <div class="instructions-content">
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Browse Needs</h4>
+                            <p>Find resources that match your interests and capabilities.</p>
+                        </div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Choose to Donate</h4>
+                            <p>Click the "Donate" button to initiate the donation process.</p>
+                        </div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Complete Your Donation</h4>
+                            <p>Follow the instructions to complete your donation of resources.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 VirSprout. All rights reserved. | Developed by 4MULA</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

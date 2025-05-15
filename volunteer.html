@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirSprout - Volunteer</title>
+    <link rel="stylesheet" href="volunteer.css">
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <h1>VirSprout</h1>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i><span class="nav-text">Home</span></a></li>
+                <li><a href="donate.html"><i class="fas fa-hand-holding-heart"></i><span class="nav-text">Donate</span></a></li>
+                <li class="active"><a href="volunteer.html"><i class="fas fa-users"></i><span class="nav-text">Volunteer</span></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+             <div class="messages">
+                <a href="messages.html" class="icon-button"><i class="fas fa-comment"></i>
+                    <span class="badge">1</span>
+                </a>
+            </div>
+            <div class="notifications">
+                <a href="notification.html" class="icon-button"><i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+            <div class="user-menu" id="userMenuToggle">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <div class="user-dropdown" id="userDropdown">
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-info">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <h3>Meljah Feve Soliva</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Donation History</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Volunteer History</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="content-area donate-content">
+            <div class="donate-header">
+                <h2>Volunteer with Us</h2>
+                <p>Share your time and skills to make a direct impact on the lives of children at Virlanie FAITH, Inc.</p>
+            </div>
+
+            <div class="Donation-tab-content">
+                <div class="tab-pane active" id="volunteer">
+                    <div class="section-intro">
+                        <h3>Volunteer Application Form</h3>
+                        <p>Join our team to support our mission through meaningful volunteer work.</p>
+                    </div>
+                    <form class="volunteer-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="affiliation">Affiliation</label>
+                            <select id="affiliation" name="affiliation" required>
+                                <option value="" disabled selected>Select your affiliation</option>
+                                <option value="school">School</option>
+                                <option value="organization">Organization</option>
+                                <option value="group">Group</option>
+                                <option value="independent">Independent Volunteer</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="affiliation-details" style="display: none;">
+                            <label for="affiliation-name">Affiliation Name</label>
+                            <input type="text" id="affiliation-name" name="affiliation-name" placeholder="Enter the name of your school, organization, or group">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Submit Application</button>
+                            <a href="volunteer.html" class="btn-outline">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            <div class="upcoming-events">
+                <h3>Upcoming Events</h3>
+                <div class="events-content">
+                    <div class="event-step">
+                        <div class="step-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Community Cleanup Day</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Barangay 18, Bacolod City</p>
+                            <p><i class="fas fa-calendar"></i> 10 May</p>
+                        </div>
+                    </div>
+                    <div class="event-step">
+                        <div class="step-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Reading Buddies Program</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Virlanie Center</p>
+                            <p><i class="fas fa-calendar"></i> 15 May</p>
+                        </div>
+                    </div>
+                    <div class="event-step">
+                        <div class="step-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Sports Day</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Bacolod Public Park</p>
+                            <p><i class="fas fa-calendar"></i> 22 May</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="events.html" class="btn-view-all btn-outline">View All Events</a>
+            </div>
+        </aside>
+    </main>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 VirSprout. All rights reserved. | Developed by 4MULA</p>
+    </div>
+
+    <script>
+        document.getElementById('affiliation').addEventListener('change', function() {
+            var affiliationDetails = document.getElementById('affiliation-details');
+            if (this.value !== 'independent') {
+                affiliationDetails.style.display = 'block';
+                document.getElementById('affiliation-name').setAttribute('required', 'required');
+            } else {
+                affiliationDetails.style.display = 'none';
+                document.getElementById('affiliation-name').removeAttribute('required');
+            }
+        });
+    </script>
+</body>
+</html>

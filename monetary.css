@@ -1,0 +1,92 @@
+.tab-pane#monetary {
+  font-family: 'Open Sans', Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: #333;
+}
+
+.payment-details {
+  display: none;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.payment-details.active {
+  display: block;
+}
+
+.payment-details h4 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: .2rem;
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.account {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #3182ce;
+}
+
+.account h5 {
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.account p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.account p strong {
+  margin-right: 0.25rem;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.qr-code img {
+  max-width: 200px;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+  background-color: #fff;
+}
+
+.note {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.note a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .account-details {
+      flex-direction: column;
+      align-items: center;
+  }
+}
