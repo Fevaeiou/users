@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirSprout - Messages</title>
+    <link rel="stylesheet" href="messages.css">
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <h1>VirSprout</h1>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i><span class="nav-text">Home</span></a></li>
+                <li><a href="donate.html"><i class="fas fa-hand-holding-heart"></i><span class="nav-text">Donate</span></a></li>
+                <li><a href="volunteer.html"><i class="fas fa-users"></i><span class="nav-text">Volunteer</span></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="messages">
+                <a href="messages.html" class="icon-button active"><i class="fas fa-comment"></i>
+                    <span class="badge">1</span>
+                </a>
+            </div>
+            <div class="notifications">
+                <a href="notification.html" class="icon-button"><i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+            <div class="user-menu" id="userMenuToggle">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <div class="user-dropdown" id="userDropdown">
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <aside class="sidebar chat-contacts">
+            <div class="search-messages">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            
+            <div class="contacts-list">
+                <div class="contact active">
+                    <img src="profile.jpeg" alt="Virlanie FAITH" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name-time">
+                            <h4>Virlanie FAITH, Inc.</h4>
+                            <span class="time">2h</span>
+                        </div>
+                        <div class="last-message">
+                            <p>Thank you for your donation to our school...</p>
+                            <span class="unread-badge">1</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact">
+                    <img src="teya.jpeg" alt="Alteyah Marree" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name-time">
+                            <h4>Alteyah Marree Hausan</h4>
+                            <span class="time">1d</span>
+                        </div>
+                        <div class="last-message">
+                            <p>See you at the volunteer orientation!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact">
+                    <img src="lloyd.jpeg" alt="John Lloyd" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name-time">
+                            <h4>John Lloyd Romano</h4>
+                            <span class="time">3d</span>
+                        </div>
+                        <div class="last-message">
+                            <p>The community cleanup was amazing...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact">
+                    <img src="janrey.jpeg" alt="Jan Rey" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name-time">
+                            <h4>Jan Rey Gorre</h4>
+                            <span class="time">1w</span>
+                        </div>
+                        <div class="last-message">
+                            <p>I'll bring extra supplies for the event</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="chat-area">
+            <div class="chat-header">
+                <div class="chat-contact-info">
+                    <img src="profile.jpeg" alt="Virlanie FAITH" class="contact-avatar">
+                    <div>
+                        <h3>Virlanie FAITH, Inc.</h3>
+                        <p><i class="fas fa-circle online"></i> Online</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="messages-container">
+                <div class="date-divider">
+                    <span>May 15, 2025</span>
+                </div>
+                
+                <div class="message received">
+                    <img src="profile.jpeg" alt="Virlanie FAITH" class="message-avatar">
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>Hello Meljah! Thank you for your recent donation to our school supplies drive. Your contribution will help 5 children get the materials they need.</p>
+                        </div>
+                        <span class="message-time">10:15 AM</span>
+                    </div>
+                </div>
+                
+                <div class="message sent">
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>You're welcome! I'm happy to help the children with their education needs.</p>
+                        </div>
+                        <span class="message-time">10:20 AM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message-input-area">
+                <button class="attachment-btn"><i class="fas fa-paperclip"></i></button>
+                <div class="message-input">
+                    <input type="text" placeholder="Type a message...">
+                </div>
+                <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </section>
+
+        <aside class="right-sidebar chat-details">
+            <div class="contact-profile">
+                <img src="profile.jpeg" alt="Virlanie FAITH" class="large-avatar">
+                <h3>Virlanie FAITH, Inc.</h3>
+                <p class="contact-type">Non-profit Organization</p>
+                <div class="contact-actions">
+                    <button class="profile-btn">View Profile</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userMenuToggle = document.getElementById('userMenuToggle');
+            const userDropdown = document.getElementById('userDropdown');
+            
+            if (userMenuToggle && userDropdown) {
+                userMenuToggle.addEventListener('click', function() {
+                    userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+
+            const contacts = document.querySelectorAll('.contact');
+            contacts.forEach(contact => {
+                contact.addEventListener('click', function() {
+                    contacts.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            const mediaTabs = document.querySelectorAll('.media-tab');
+            mediaTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    mediaTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

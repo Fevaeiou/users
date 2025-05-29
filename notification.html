@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirSprout - Notifications</title>
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <h1>VirSprout</h1>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i><span class="nav-text">Home</span></a></li>
+                <li><a href="donate.html"><i class="fas fa-hand-holding-heart"></i><span class="nav-text">Donate</span></a></li>
+                <li><a href="volunteer.html"><i class="fas fa-users"></i><span class="nav-text">Volunteer</span></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="messages">
+                <a href="messages.html" class="icon-button"><i class="fas fa-comment"></i>
+                    <span class="badge">1</span>
+                </a>
+            </div>
+            <div class="notifications">
+                <a href="notification.html" class="icon-button active"><i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+            <div class="user-menu" id="userMenuToggle">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <div class="user-dropdown" id="userDropdown">
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container notification-container">
+        <div class="notification-header">
+            <h2>Notifications</h2>
+            <div class="notification-actions">
+                <button class="mark-all-read" id="markAllRead">Mark all as read</button>
+                <div class="notification-filter">
+                    <select id="notificationFilter">
+                        <option value="all">All notifications</option>
+                        <option value="unread">Unread</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="event">Events</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="notification-list">
+            <div class="date-divider">
+                <span>Today</span>
+            </div>
+            
+            <div class="notification-item unread event">
+                <div class="notification-icon event-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <p><strong>Upcoming Volunteer Event:</strong> Community Cleanup Day at Bago City on May 20, 2025 at 8:00 AM. Don't forget to bring water and sun protection!</p>
+                    </div>
+                    <div class="notification-time">5 hours ago</div>
+                </div>
+                <div class="notification-actions">
+                    <button class="notification-options-btn"><i class="fas fa-ellipsis-v"></i></button>
+                    <div class="notification-options-dropdown">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-envelope-open"></i> Mark as read</a></li>
+                            <li><a href="#"><i class="fas fa-trash"></i> Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notification-item unread volunteer">
+                <div class="notification-icon volunteer-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <p><strong>Volunteer Application Approved!</strong> Your application to volunteer for the School Supplies Distribution has been approved. Orientation is on May 18, 2025.</p>
+                    </div>
+                    <div class="notification-time">8 hours ago</div>
+                </div>
+                <div class="notification-actions">
+                    <button class="notification-options-btn"><i class="fas fa-ellipsis-v"></i></button>
+                    <div class="notification-options-dropdown">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-envelope-open"></i> Mark as read</a></li>
+                            <li><a href="#"><i class="fas fa-trash"></i> Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-divider">
+                <span>Yesterday</span>
+            </div>
+
+            <div class="notification-item volunteer">
+                <div class="notification-icon volunteer-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <p><strong>New Volunteer Opportunity:</strong> We need volunteers for our upcoming Open Day Center on June 5, 2025.</p>
+                    </div>
+                    <div class="notification-time">1 day ago</div>
+                </div>
+                <div class="notification-actions">
+                    <button class="notification-options-btn"><i class="fas fa-ellipsis-v"></i></button>
+                    <div class="notification-options-dropdown">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-envelope-open"></i> Mark as read</a></li>
+                            <li><a href="#"><i class="fas fa-trash"></i> Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more">
+            <button id="loadMoreBtn">Load More</button>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userMenuToggle = document.getElementById('userMenuToggle');
+            const userDropdown = document.getElementById('userDropdown');
+            
+            if (userMenuToggle && userDropdown) {
+                userMenuToggle.addEventListener('click', function() {
+                    userDropdown.style.display = userDropdown.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+
+            const optionButtons = document.querySelectorAll('.notification-options-btn');
+            
+            optionButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const dropdown = this.nextElementSibling;
+                    
+                    document.querySelectorAll('.notification-options-dropdown').forEach(drop => {
+                        if (drop !== dropdown) {
+                            drop.classList.remove('active');
+                        }
+                    });
+                    
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            document.addEventListener('click', function() {
+                document.querySelectorAll('.notification-options-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+
+            const markAllReadBtn = document.getElementById('markAllRead');
+            if (markAllReadBtn) {
+                markAllReadBtn.addEventListener('click', function() {
+                    document.querySelectorAll('.notification-item.unread').forEach(item => {
+                        item.classList.remove('unread');
+                    });
+                    
+                    const badge = document.querySelector('.notifications .badge');
+                    if (badge) {
+                        badge.textContent = '0';
+                    }
+                });
+            }
+
+            const filterSelect = document.getElementById('notificationFilter');
+            if (filterSelect) {
+                filterSelect.addEventListener('change', function() {
+                    const value = this.value;
+                    const items = document.querySelectorAll('.notification-item');
+                    
+                    items.forEach(item => {
+                        if (value === 'all') {
+                            item.style.display = 'flex';
+                        } else if (value === 'unread') {
+                            item.style.display = item.classList.contains('unread') ? 'flex' : 'none';
+                        } else {
+                            item.style.display = item.classList.contains(value) ? 'flex' : 'none';
+                        }
+                    });
+                    
+                    const dateDividers = document.querySelectorAll('.date-divider');
+                    dateDividers.forEach(divider => {
+                        let nextElement = divider.nextElementSibling;
+                        let hasVisibleItem = false;
+                        
+                        while (nextElement && !nextElement.classList.contains('date-divider')) {
+                            if (nextElement.style.display === 'flex') {
+                                hasVisibleItem = true;
+                                break;
+                            }
+                            nextElement = nextElement.nextElementSibling;
+                        }
+                        
+                        divider.style.display = hasVisibleItem ? 'block' : 'none';
+                    });
+                });
+            }
+
+            document.querySelectorAll('.notification-options-dropdown a:first-child').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const notificationItem = this.closest('.notification-item');
+                    if (notificationItem.classList.contains('unread')) {
+                        notificationItem.classList.remove('unread');
+
+                        const badge = document.querySelector('.notifications .badge');
+                        if (badge) {
+                            const currentCount = parseInt(badge.textContent);
+                            badge.textContent = currentCount > 0 ? currentCount - 1 : '0';
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('.notification-options-dropdown a:last-child').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const notificationItem = this.closest('.notification-item');
+
+                    if (notificationItem.classList.contains('unread')) {
+                        const badge = document.querySelector('.notifications .badge');
+                        if (badge) {
+                            const currentCount = parseInt(badge.textContent);
+                            badge.textContent = currentCount > 0 ? currentCount - 1 : '0';
+                        }
+                    }
+                    
+                    notificationItem.remove();
+
+                    const dateDividers = document.querySelectorAll('.date-divider');
+                    dateDividers.forEach(divider => {
+                        let nextElement = divider.nextElementSibling;
+                        let hasItem = false;
+                        
+                        while (nextElement && !nextElement.classList.contains('date-divider')) {
+                            if (nextElement.classList.contains('notification-item')) {
+                                hasItem = true;
+                                break;
+                            }
+                            nextElement = nextElement.nextElementSibling;
+                        }
+                        
+                        if (!hasItem) {
+                            divider.remove();
+                        }
+                    });
+                });
+            });
+
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    this.textContent = 'Loading...';
+                    
+                    setTimeout(() => {
+                        this.textContent = 'No more notifications';
+                        this.disabled = true;
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

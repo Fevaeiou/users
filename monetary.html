@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirSprout - Monetary Donations</title>
+    <link rel="stylesheet" href="monetary.css">
+    <link rel="stylesheet" href="rform.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <h1>VirSprout</h1>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i><span class="nav-text">Home</span></a></li>
+                <li class="active"><a href="donate.html"><i class="fas fa-hand-holding-heart"></i><span class="nav-text">Donate</span></a></li>
+                <li><a href="volunteer.html"><i class="fas fa-users"></i><span class="nav-text">Volunteer</span></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+             <div class="messages">
+                <a href="messages.html" class="icon-button"><i class="fas fa-comment"></i>
+                    <span class="badge">1</span>
+                </a>
+            </div>
+            <div class="notifications">
+                <a href="notification.html" class="icon-button"><i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+            <div class="user-menu" id="userMenuToggle">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <div class="user-dropdown" id="userDropdown">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-info">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <h3>Meljah Feve Soliva</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="profile.jpeg"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Donation History</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Volunteer History</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="content-area donate-content">
+            <div class="donate-header">
+                <h2>Make a Difference Today</h2>
+                <p>Choose how you would like to support Virlanie FAITH, Inc.</p>
+            </div>
+
+            <div class="donation-tabs">
+                <button class="tab-button"><a href="donate.html">In-Kind Donations</a></button>
+                <button class="tab-button"><a href="rform.html">Resource Needs</a></button>
+                <button class="tab-button active"><a href="monetary.html">Monetary Donations</a></button>
+            </div>
+
+            <div class="donation-tab-content">
+                <div class="tab-pane active" id="monetary">
+                    <div class="section-intro">
+                        <h3>Monetary Donations</h3>
+                        <p>Your financial support helps us provide consistent care and run our programs effectively.</p>
+                    </div>
+
+                        <div class="bank-accounts payment-details active">
+                            <div class="account-details">
+                                <div class="account">
+                                    <h5>Metrobank</h5>
+                                    <p><strong>Account Name:</strong> Virlanie FAITH, Inc.</p>
+                                    <p><strong>Account Number:</strong> 321-987654-321</p>
+                                    <p><strong>Branch:</strong> Bacolod City Central</p>
+                                </div>
+                                <div class="account">
+                                    <h5>UnionBank</h5>
+                                    <p><strong>Account Name:</strong> Virlanie FAITH, Inc.</p>
+                                    <p><strong>Account Number:</strong> 456-123789-456</p>
+                                    <p><strong>Branch:</strong> Bacolod Araneta Street</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="gcash payment-details">
+                            <h4>GCash Details</h4>
+                            <div class="account-details">
+                                <div class="account">
+                                    <div class="qr-code">
+                                        <img src="gcash-qr.jpeg" alt="GCash QR Code">
+                                    </div>
+                                    <p><strong>Account Name:</strong> Virlanie FAITH, Inc.</p>
+                                    <p><strong>GCash Number:</strong> 0919-234-5678</p>
+                                    <p class="note">Please send confirmation of your transfer to <a href="mailto:donations@virlaniefaith.org">donations@virlaniefaith.org</a> with your name and contact information.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paymaya payment-details">
+                            <h4>PayMaya Details</h4>
+                            <div class="account-details">
+                                <div class="account">
+                                    <div class="qr-code">
+                                        <img src="paymaya-qr.jpeg" alt="PayMaya QR Code">
+                                    </div>
+                                    <p><strong>Account Name:</strong> Virlanie FAITH, Inc.</p>
+                                    <p><strong>PayMaya Number:</strong> 0920-876-5432</p>
+                                    <p class="note">Please send confirmation of your transfer to <a href="mailto:donations@virlaniefaith.org">donations@virlaniefaith.org</a> with your name and contact information.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            <div class="donation-instructions">
+                <h3>How to Donate</h3>
+                <div class="instructions-content">
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Select Donation Type</h4>
+                            <p>Choose between one-time, monthly, or dedicated fund donations.</p>
+                        </div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Choose Amount</h4>
+                            <p>Select a predefined amount or enter a custom amount.</p>
+                        </div>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Complete Payment</h4>
+                            <p>Follow the payment instructions for your chosen method.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 VirSprout. All rights reserved. | Developed by 4MULA</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

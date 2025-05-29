@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirSprout - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <h1>VirSprout</h1>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li class="active"><a href="home.html"><i class="fas fa-home"></i><span class="nav-text">Home</span></a></li>
+                <li><a href="donate.html"><i class="fas fa-hand-holding-heart"></i><span class="nav-text">Donate</span></a></li>
+                <li><a href="volunteer.html"><i class="fas fa-users"></i><span class="nav-text">Volunteer</span></a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+             <div class="messages">
+                <a href="messages.html" class="icon-button"><i class="fas fa-comment"></i>
+                    <span class="badge">1</span>
+                </a>
+            </div>
+            <div class="notifications">
+                <a href="notification.html" class="icon-button"><i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
+            </div>
+            <div class="user-menu" id="userMenuToggle">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <div class="user-dropdown" id="userDropdown">
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-info">
+                <img src="user.jpeg" alt="User Profile" class="user-avatar">
+                <h3>Meljah Feve Soliva</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Donation History</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Volunteer History</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="content-area">
+            <div class="feed-filters">
+                <button><a href="home.html">All Posts</a></button>
+                <button class="active"><a href="updates.html">Updates</a></button>
+                <button><a href="resource_need.html">Resource Needs</a></button>
+                <button><a href="events.html">Events</a></button>
+            </div>
+
+            <div class="news-feed">
+                <div class="post updates">
+                    <div class="post-header">
+                        <img src="profile.jpeg" alt="Virlanie FAITH" class="post-avatar">
+                        <div class="post-info">
+                            <h4>Virlanie FAITH, Inc. <span class="post-type updates">Updates</span></h4>
+                            <p class="post-time">Yesterday</p>
+                        </div>
+                        <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h3>PROUD MOMENT: Virlanie FAITH Farm resident-students finish the school year</h3>
+                        <p>On April 15, 2025, our five Virlanie FAITH Farm residents enrolled in the SPED program of Gen. Juan A. Araneta Elementary School, recently marked the end of a meaningful school year with their Completion Rites!</p>
+                        <p>We're beaming with pride as Erica, Kenneth, Albert, Angel, and Matthew received so many special awards like Courteous Kid, Most Well-behaved, Mr. Patience, Most Disciplined, and Batang Maasahan (Most Reliable Kid) — recognitions that reflect not just academic progress, but incredible growth in character and behavior.</p>
+                        
+                        <div class="people-involved">
+                            <div class="person">
+                                <img src="teya.jpeg" alt="Person">
+                                <span>Alteyah Marree Hausan</span>
+                            </div>
+                            <div class="person">
+                                <img src="lloyd.jpeg" alt="Person">
+                                <span>John Lloyd Romano</span>
+                            </div>
+                            <div class="person">
+                                <img src="feve.jpeg" alt="Person">
+                                <span>Meljah Feve Soliva</span>
+                            </div>
+                            <div class="person">
+                                <img src="janrey.jpeg" alt="Person">
+                                <span>Jan Rey Gorre</span>
+                            </div>
+                        </div>
+                        
+                        <p>This is a great achievement for the entire Farm family, as their House Parents and the rest of the Admin, Medical, and Agri team members have encouraged them throughout the school year.</p>
+                    </div>
+                    <div class="post-image">
+                        <img src="pic2.jpeg" alt="Graduation Ceremony">
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </main>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 VirSprout. All rights reserved. | Developed by 4MULA</p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
